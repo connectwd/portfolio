@@ -53,10 +53,26 @@ The server will be running at [http://localhost:3000](http://localhost:3000).
 
 For more information about configuration, follow the instructions in the [Getting Started](https://nextfolio-template.vercel.app/blog/getting-started#configuration) post.
 
-## Contributing
+## Structure
 
-Contributions are welcome! To get involved, just push your code to the repo. Whether you're enhancing existing features or adding new ones, your efforts are greatly appreciated!
+my-portfolio/  
+├── public/             # Static assets (images, fonts, etc.)  
+├── src/  
+│   ├── components/     # Reusable UI components  
+│   │   ├── Hero.js  
+│   │   ├── AboutMe.js  
+│   │   ├── WorkHistory.js  
+│   │   ├── Projects.js  
+│   │   ├── Skills.js  
+│   │   ├── Education.js  
+│   │   └── ContactForm.js  
+│   ├── pages/          # Next.js routing  
+│   │   └── index.js    # Main landing page  
+│   ├── styles/         # CSS/SCSS modules  
+│   │   ├── globals.css  
+│   │   └── [component-specific styles]  
+│   ├── data/           # JSON file for project data  
+│   │   └── projects.json  
+│   └── utils/          # Helper functions (if needed)  
+└── package.json  
 
-## Licence
-
-Nextfolio is open-source and released under the MIT License.
