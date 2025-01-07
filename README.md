@@ -75,9 +75,3 @@ my-portfolio/
 │   │   └── projects.json  
 │   └── utils/          # Helper functions (if needed)  
 └── package.json  
-
-
-
-
-
-
