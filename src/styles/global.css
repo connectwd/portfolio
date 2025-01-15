@@ -18,6 +18,7 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
+  color-scheme: light dark;
 }
 
 /* Dark theme colors */
@@ -36,6 +37,32 @@
 
 html {
   min-width: 360px;
+  padding: 0;
+}
+
+body {
+  background-image: url('/photos/blob-light.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: -25%;
+}
+
+/* theme switchs */
+p, h1, h2, h3, h4, h5, h6 {
+  color: light-dark(#001329, #f9f9f9);
+}
+body {
+  background-color: light-dark(#f9f9f9, #001329);
+}
+li {
+  border-color: light-dark(#001329, #f9f9f9);
+}
+.techLi {
+  background-color: light-dark(#6b7280, rgb(15 118 110 / 0.3));
+  color: light-dark(#f9f9f9, #5eead4);
+}
+.group:hover {
+  background-color: light-dark(rgba(65, 75, 89, 0.1), rgba(51, 65, 85, 0.5));
 }
 
 .prose {
