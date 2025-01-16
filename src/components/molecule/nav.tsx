@@ -57,7 +57,7 @@ export function Navbar() {
 
   return (
     <nav className="lg:mb-16 mb-12 py-5" aria-label="Main Navigation">
-      <div className="flex lg:flex-col md:items-center justify-between">
+      <div className="flex lg:flex-col md:items-center justify-between gap-6">
         <ul className="flex flex-col gap-4 mx-2 md:mt-0 md:ml-auto">
           {Object.entries(navItems).map(([path, { name }]) => (
             <li
@@ -74,8 +74,9 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-            <Button variant="secondary-link" text={"My CV"} icon={FiDownload} href="/jake_owen_cv.pdf"/>
+            
         </ul>
+        <Button variant="secondary-link" text={"My CV"} icon={FiDownload} href="/jake_owen_cv.pdf"/>
       </div>
     </nav>
   );

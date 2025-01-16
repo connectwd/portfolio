@@ -11,7 +11,7 @@ export const ProjectCard = ({ key, project }: Props) => {
     return (
         <div
             key={key}
-            className="rounded-lg overflow-hidden bg-slate-600/10 transition-all motion-reduce:transition-none duration-300 relative group"
+            className="rounded-lg overflow-hidden bg-slate-600/10 shadow-inner-glow transition-all motion-reduce:transition-none duration-300 relative group"
         >
             {project.image && (
                 <img

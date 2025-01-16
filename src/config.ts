@@ -8,7 +8,7 @@ export const metaData = {
 };
 
 export const socialLinks = {
-  github: "https://github.com/connectwd",
-  linkedin: "https://www.linkedin.com/in/jake-owen/",
-  email: "mailto:jake.l.owen@outlook.com",
+  github: { url: "https://github.com/connectwd", lable: "GitHub" },
+  linkedin: { url: "https://www.linkedin.com/in/jake-owen/", lable: "LinkedIn" },
+  email: { url: "mailto:jake.l.owen@outlook.com", lable: "Email" },
 };

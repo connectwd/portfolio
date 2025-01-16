@@ -1,3 +1,5 @@
+import Button from "../atoms/buttons/button";
+
 export default function ContactForm() {
     return (
       <section id="contact" className="py-20">
@@ -19,12 +21,11 @@ export default function ContactForm() {
               placeholder="Message"
               className="w-full px-4 py-2 border rounded"
             ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-            >
-              Send
-            </button>
+            <Button
+              variant="primary-button"
+              text="Send Message"
+              styles="w-full shadow-inner-glow justify-center"
+            />
           </form>
         </div>
       </section>
