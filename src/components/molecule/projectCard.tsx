@@ -3,15 +3,15 @@ import { Project } from 'src/data/project-data'
 import TechBubble from '../atoms/techBubble'
 
 type Props = {
-    key: number,
+    index: number,
     project: Project,
 }
 
-export const ProjectCard = ({ key, project }: Props) => {
+export const ProjectCard = ({ index, project }: Props) => {
     return (
         <div
-            key={key}
-            className="rounded-lg overflow-hidden bg-slate-600/10 shadow-inner-glow transition-all motion-reduce:transition-none duration-300 relative group"
+            key={index}
+            className="rounded-lg overflow-hidden bg-slate-600/10 transition-all motion-reduce:transition-none duration-300 relative group"
         >
             {project.image && (
                 <img

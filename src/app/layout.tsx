@@ -57,9 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
-      <head>
-      </head>
-      <body className="flex flex-col items-center justify-center mx-auto overscroll-none dark:bg-[url('/photos/blob-dark.svg')]">
+      <body className="flex flex-col items-center justify-center mx-auto overscroll-none dark:bg-[url('/photos/blob-dark.svg')] lg:flex lg:justify-between lg:gap-6">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
