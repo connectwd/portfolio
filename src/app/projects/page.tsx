@@ -15,7 +15,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <a
             key={index}
-            href={project.url}
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             className="block group hover:opacity-80 transition-opacity duration-200"
@@ -24,9 +24,6 @@ export default function Projects() {
               <div className="w-full flex justify-between items-baseline">
                 <span className="text-black dark:text-white font-medium tracking-tight">
                   {project.title}
-                </span>
-                <span className="text-neutral-600 dark:text-neutral-400 tabular-nums text-sm">
-                  {project.year}
                 </span>
               </div>
               <p className="prose prose-neutral dark:prose-invert pt-3">
