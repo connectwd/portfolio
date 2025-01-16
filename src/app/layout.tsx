@@ -84,8 +84,8 @@ export default function RootLayout({
             <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-8 md:px-0 mb-6 max-w-[1000px] w-full mx-auto">
               {children}
               <Footer />
-              {/* <Analytics />
-              <SpeedInsights /> */}
+              <Analytics />
+              <SpeedInsights />
             </main>
           </div>
         </ThemeProvider>
