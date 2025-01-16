@@ -33,7 +33,7 @@ const WorkHistory = () => {
     <section id="employment" className="py-10 max-w-3xl mx-auto px-3">
       <ul className="w-fullspace-y-6 space-x-1">
         {jobs.map((job, index) => (
-          <li className="group transition-all rounded-xl" key={index}>
+          <li className="mx-1 my-3 group transition-all rounded-xl" key={index}>
           <JobCard key={index} job={job} />
           </li>
         ))}

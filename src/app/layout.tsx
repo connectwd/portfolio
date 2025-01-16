@@ -67,16 +67,16 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="lg:flex lg:justify-between lg:gap-6">
-            <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[50%] lg:flex-col lg:justify-between lg:py-24 lg:px-5">
-              <div className="flex flex-col items-start gap-5">
-                <Image className="bg-slate-100 rounded-full m-1 p-1 m-auto" src={logo} width={60} height={60} alt="logo" />
-                <h1 className="text-4xl font-bold mt-3">{metaData.title}</h1>
-                <p className="text-lg mb-3">
+            <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[50%] flex-col lg:justify-between py-24 md:px-0 lg:px-5">
+              <div className="flex flex-col items-start gap-5 max-w-full">
+                <Image className="bg-slate-100 rounded-full p-1 m-auto" src={logo} width={60} height={60} alt="logo" />
+                <h1 className="text-4xl font-bold mt-3 px-4">{metaData.title}</h1>
+                <p className="text-lg mb-3 px-4">
                   Full-Stack Developer | Problem Solver
                 </p>
                 <Navbar />
               </div>
-              <div className="flex flex-row-reverse justify-between">
+              <div className="flex flex-row-reverse justify-between px-4">
               <SocialLinks />
               <ThemeSwitch />
               </div>

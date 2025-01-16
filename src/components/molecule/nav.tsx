@@ -56,14 +56,13 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="lg:mb-16 mb-12 py-5" aria-label="Main Navigation">
-      <div className="flex lg:flex-col md:items-center justify-between gap-6">
-        <ul className="flex flex-col gap-4 mx-2 md:mt-0 md:ml-auto">
+    <nav className="lg:mb-16 mb-12 fixed top-0 lg:relative lg:py-5 justify-evenly flex lg:flex-col md:items-center lg:gap-6 h-14 lg:bg-transparent sm:navBackground lg:shadow-none sm:w-fill-available lg:w-auto" aria-label="Main Navigation">
+        <ul className="flex lg:flex-col gap-4 mx-2 md:mt-0 md:ml-auto">
           {Object.entries(navItems).map(([path, { name }]) => (
             <li
               key={path}
               className={`flex items-center px-2 transition-all duration-200 ${
-                activeSection === path ? " border-l-8" : "border-gray-400 border-l-4"
+                activeSection === path ? "lg:border-l-8 border-b-8 lg:border-b-0" : "border-gray-400 lg:border-l-4 border-b-4 lg:border-b-0"
               }`}
             >
               <Link
@@ -74,10 +73,7 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-            
         </ul>
-        <Button variant="secondary-link" text={"My CV"} icon={FiDownload} href="/jake_owen_cv.pdf"/>
-      </div>
     </nav>
   );
 }

@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({ variant, text, href, icon: Icon, onClic
   if (variant === 'primary-link' || variant === 'secondary-link') {
     const linkStyles = variant === 'primary-link' ? primaryStyles : secondaryStyles;
     return (
-      <Link href={href || '#'} className={`${baseStyles} ${linkStyles}`}>
+      <Link href={href || '#'} className={`${baseStyles} ${linkStyles} ${styles}`}>
         {text}
         {Icon && <Icon/>}
       </Link>

@@ -19,6 +19,9 @@ module.exports = {
       boxShadow: {
         'inner-glow': 'inset 0 0 20px rgba(55 255 255 / 18%)',
       },
+      width: {
+        'fill-available': '-webkit-fill-available',
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

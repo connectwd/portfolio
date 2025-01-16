@@ -6,7 +6,7 @@ const JobCard = ({ job }) => {
   const { title, company, date, description, technologies, links } = job;
 
   return (
-    <div className=" group-hover:!opacity-100 group-hover:/list:opacity-50 group-hover transition motion-reduce:transition-none p-5">
+    <div className=" group-hover:!opacity-100 group-hover:/list:opacity-50 group-hover transition motion-reduce:transition-none p-5 shadow-inner-glow rounded-lg">
       <div className="flex justify-between items-start">
         <div>
           <p className="text-sm">{date}</p>

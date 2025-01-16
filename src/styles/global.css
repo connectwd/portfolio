@@ -47,15 +47,29 @@ body {
   background-position-x: -25%;
 }
 
+section {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
 /* theme switchs */
 p, h1, h2, h3, h4, h5, h6 {
   color: light-dark(#001329, #f9f9f9);
 }
 body {
   background-color: light-dark(#f9f9f9, #001329);
+  z-index: 0;
+}
+nav {
+  z-index: 1000;
+}
+.navBackground {
+  background-color: light-dark(#f9f9f900, #001329);
+  box-shadow: #001329 0px 10px 12px 0px;
 }
 li {
   border-color: light-dark(#001329, #f9f9f9);
+  margin-inline: 0.3rem !important;
 }
 .techLi {
   background-color: light-dark(#6b7280, rgb(15 118 110 / 0.3));
