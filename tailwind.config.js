@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./public/**/*.svg"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}", "./public/**/*.svg"],
   theme: {
     extend: {
       fontFamily: {
@@ -15,6 +15,12 @@ module.exports = {
             "blockquote p:first-of-type::after": { content: "none" },
           },
         },
+      },
+      boxShadow: {
+        'inner-glow': 'inset 0 0 20px rgba(55 255 255 / 18%)',
+      },
+      width: {
+        'fill-available': '-webkit-fill-available',
       },
     },
   },
