@@ -11,7 +11,6 @@ const navItems = {
   "#contact": { name: "Contact" },
 };
 
-// Debounce function to limit the rate of function execution
 function debounce(func: Function, wait: number) {
   let timeout: NodeJS.Timeout;
   return function(...args: any[]) {
@@ -41,14 +40,13 @@ export function Navbar() {
           }
         }
       });
-      console.log('currentSection', currentSection);
       setActiveSection(currentSection);
     };
 
     const debouncedHandleScroll = debounce(handleScroll, 20);
 
     window.addEventListener("scroll", debouncedHandleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", debouncedHandleScroll);
