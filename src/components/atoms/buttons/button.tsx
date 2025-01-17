@@ -7,9 +7,10 @@ interface ButtonProps {
   icon? // Only needed for link variants
   onClick?: () => void; // Only needed for button variants
   styles?: string
+  type?: 'button' | 'submit' | 'reset'
 }
 
-const Button: React.FC<ButtonProps> = ({ variant, text, href, icon: Icon, onClick, styles }) => {
+const Button: React.FC<ButtonProps> = ({ variant, text, href, icon: Icon, onClick, styles, type }) => {
   const baseStyles = 'py-2 px-6 rounded text-center flex flex-row items-center gap-2';
   const primaryStyles = 'bg-blue-800 shadow-inner-glow text-white hover:bg-blue-600';
   const secondaryStyles = 'border border-blue-600 shadow-inner-glow hover:bg-blue-200/20';
@@ -17,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({ variant, text, href, icon: Icon, onClic
   if (variant === 'primary-button' || variant === 'secondary-button') {
     const buttonStyles = variant === 'primary-button' ? primaryStyles : secondaryStyles;
     return (
-      <button className={`${baseStyles} ${buttonStyles} ${styles}`} onClick={onClick}>
+      <button type={type} className={`${baseStyles} ${buttonStyles} ${styles}`} onClick={onClick}>
         {text}
       </button>
     );
