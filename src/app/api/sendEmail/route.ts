@@ -1,17 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { parseRequestBody } from 'src/app/helpers/dataFormatting/parseRequestBody';
 
-
 export async function POST(
     req: NextRequest,
 ): Promise<NextResponse<{ status: number } | { message: string }>> {
     const request = await parseRequestBody(req);
-    console.log(process.env.MAKE_URL);
     if (!request) {
         return NextResponse.json({ status: "400", message: 'Invalid request body' });
     }
     try {
-        const response = await fetch('https://hook.eu2.make.com/z531hrx3fcavv3wiacqwb94o952hr1ic', {
+        const response = await fetch(`${process.env.MAKE_URL}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
