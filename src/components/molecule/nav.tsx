@@ -54,7 +54,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="lg:mb-16 mb-12 fixed top-0 lg:relative lg:py-5 justify-evenly flex lg:flex-col md:items-center lg:gap-6 h-14 lg:bg-transparent sm:navBackground lg:shadow-none sm:w-fill-available lg:w-auto" aria-label="Main Navigation">
+    <nav className="lg:mb-16 mb-12 fixed top-0 lg:relative lg:py-5 navBackground justify-evenly flex lg:flex-col md:items-center lg:gap-6 h-14 lg:bg-transparent  lg:shadow-none sm:w-fill-available lg:w-auto" aria-label="Main Navigation">
         <ul className="flex lg:flex-col gap-4 mx-2 md:mt-0 md:ml-auto">
           {Object.entries(navItems).map(([path, { name }]) => (
             <li
