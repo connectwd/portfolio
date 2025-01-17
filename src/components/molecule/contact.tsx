@@ -2,6 +2,7 @@
 import { FiDownload } from "react-icons/fi";
 import Button from "../atoms/buttons/button";
 import { useState } from "react";
+import { fetchBearerToken } from "src/app/helpers/api/fetchBearerToken";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -20,11 +21,13 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const token = await fetchBearerToken();
     console.log('formData:', formData);
     const response = await fetch('/api/sendEmail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'authorisation': `Bearer ${token}`,
       },
       body: JSON.stringify(formData),
     });
