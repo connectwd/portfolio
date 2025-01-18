@@ -1,3 +1,3 @@
 export const fetchBearerToken = async () => {
-   return process.env.BEARER_TOKEN;
+   return process.env.NEXT_PUBLIC_BEARER_TOKEN;
 };
