@@ -22,7 +22,6 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const token = await fetchBearerToken();
-    console.log('formData:', formData);
     const response = await fetch('/api/sendEmail', {
       method: 'POST',
       headers: {
@@ -34,6 +33,11 @@ export default function ContactForm() {
     if (response.ok) {
       // Handle successful response
       console.log('Email sent successfully:', response);
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
     } else {
       // Handle error response
       console.error('Failed to send email');
@@ -42,27 +46,41 @@ export default function ContactForm() {
 
   return (
     <section id="contact" className="py-20 mx-auto">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-center mb-8">Let's Connect</h2>
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto space-y-4">
+        <form onSubmit={handleSubmit} className="w-full mx-auto space-y-4">
+          <label htmlFor="contact-name" className="sr-only">
+            Name
+          </label>
           <input
             type="text"
             name="name"
+            id="contact-name"
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded"
+            required
           />
+          <label htmlFor="contact-email" className="sr-only">
+            Email
+          </label>
           <input
             type="email"
             name="email"
+            id="contact-email"
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded"
+            required
           />
+          <label htmlFor="contact-message" className="sr-only">
+            Message
+          </label>
           <textarea
             name="message"
+            id="contact-message"
             rows={4}
             placeholder="Message"
             value={formData.message}

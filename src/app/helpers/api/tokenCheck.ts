@@ -14,4 +14,4 @@ export function isCorrectToken(headers: Headers) {
     return true;
   }
   
-  export const authToken: string = `Bearer ${process.env.BEARER_TOKEN}`;
+  export const authToken: string = `Bearer ${process.env.NEXT_PUBLIC_BEARER_TOKEN}`;

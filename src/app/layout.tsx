@@ -12,6 +12,8 @@ import Image from "next/image";
 import logo from "../../public/photos/JO-Button-Logo.svg"
 import SocialLinks from "src/components/molecule/linkGroups";
 
+require('dotenv').config()
+
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
   title: {

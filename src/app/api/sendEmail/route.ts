@@ -16,6 +16,7 @@ export async function POST(
     if (!request) {
         return NextResponse.json({ status: "400", message: 'Invalid request body' });
     }
+    console.log('about to send email', request);
     try {
         const response = await fetch(`${process.env.MAKE_URL}`, {
             method: 'POST',
@@ -24,7 +25,13 @@ export async function POST(
             },
             body: JSON.stringify(request),
         });
-        return NextResponse.json({ status: response.status, message: response.statusText });
+        console.log('Email sent', response);
+        if (response.ok) {
+            console.log('Email sent successfully');
+            return NextResponse.json({ status: response.status, message: response.statusText  });
+        } else {
+        return NextResponse.json({ status: response.status || 404, message: response.statusText });
+        }
     } catch (error) {
         return NextResponse.json({ status: "500", message: 'Internal Server Error' });
     }
