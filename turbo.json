@@ -1,0 +1,12 @@
+{
+    "globalDependencies": ["**/.env.*local"],
+    "extends": ["//"],
+    "pipeline": {
+      "build": {
+        "env": [
+            "BEARER_TOKEN",
+            "MAKE_URL"
+        ]
+      }
+    }
+}
