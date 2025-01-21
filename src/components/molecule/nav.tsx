@@ -9,7 +9,7 @@ const navItems = {
   "#employment": { name: "Experience" },
   "#projects": { name: "Projects" },
   "#contact": { name: "Contact" },
-  "jake_owen_cv.pdf": { name: "CV" },
+  "jake_owen_cv.pdf": { name: "CV"},
 };
 
 function debounce(func: Function, wait: number) {
