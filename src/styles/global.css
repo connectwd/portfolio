@@ -67,8 +67,8 @@ nav {
   width: 100%;
 }
 .navBackground {
-  background-color: light-dark(#f9f9f900, #001329);
-  box-shadow: #001329 0px 10px 12px 0px;
+  background-color: light-dark(#f9f9f9, #001329);
+  box-shadow: light-dark(#f9f9f9, #001329) 0px 10px 12px 0px;
 }
 li {
   border-color: light-dark(#001329, #f9f9f9);

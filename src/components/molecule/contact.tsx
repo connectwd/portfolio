@@ -93,13 +93,6 @@ export default function ContactForm() {
             text="Send Message"
             styles="w-full shadow-inner-glow justify-center"
           />
-          <Button
-            variant="secondary-link"
-            text="View CV"
-            icon={FiDownload}
-            href="/jake_owen_cv.pdf"
-            styles="w-full shadow-inner-glow justify-center"
-          />
         </form>
       </div>
     </section>
