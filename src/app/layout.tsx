@@ -67,29 +67,34 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="lg:flex lg:justify-between lg:gap-6">
-            <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[50%] flex-col lg:justify-between py-24 md:px-0 lg:px-5">
+            <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[50%] flex-col lg:justify-between py-5 pt-20 lg:pt-16 md:px-0 lg:px-5">
               <div className="flex flex-col items-start gap-5 max-w-full">
-                <Image className="bg-slate-100 rounded-full p-1 m-auto" src={logo} width={60} height={60} alt="logo" />
-                <h1 className="text-4xl font-bold mt-3 px-4">{metaData.title}</h1>
-                <p className="text-lg mb-3 px-4">
+                <Image className="bg-slate-100 rounded-full p-1 mx-auto lg:mx-0" src={logo} width={60} height={60} alt="logo" />
+                <h1 className="text-4xl font-bold mx-auto lg:mx-0 mt-4">{metaData.title}</h1>
+                <p className="text-lg mb-3 mx-auto lg:mx-0">
                   Full-Stack Developer | Problem Solver
                 </p>
                 <Navbar />
               </div>
-              <div className="flex flex-row-reverse justify-between px-4">
-              <SocialLinks />
-              <ThemeSwitch />
+              <div className="flex-row-reverse justify-between px-4 hidden lg:flex">
+                <SocialLinks />
+                <ThemeSwitch />
               </div>
             </header>
-            <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-8 md:px-0 mb-6 max-w-[1000px] w-full mx-auto">
+            <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col lg:px-6 px-2 mb-6 max-w-[1000px] w-full mx-auto">
               {children}
-              <Footer />
+              
+              <div className="flex-row-reverse justify-between lg:px-4 lg:hidden flex align-middle">
+                <SocialLinks />
+                <Footer />
+                <ThemeSwitch />
+              </div>
               <Analytics />
               <SpeedInsights />
             </main>
           </div>
         </ThemeProvider>
-      </body>
-    </html>
+      </body >
+    </html >
   );
 }

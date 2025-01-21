@@ -45,9 +45,9 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 mx-auto">
+    <section id="contact" className="pb-20 mx-auto">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-8">Let's Connect</h2>
+        <h2 className="text-3xl font-semibold text-left mb-5">Contact Me</h2>
         <form onSubmit={handleSubmit} className="w-full mx-auto space-y-4">
           <label htmlFor="contact-name" className="sr-only">
             Name

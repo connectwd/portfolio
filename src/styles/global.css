@@ -19,6 +19,8 @@
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
   color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Dark theme colors */
@@ -62,6 +64,7 @@ body {
 }
 nav {
   z-index: 1000;
+  width: 100%;
 }
 .navBackground {
   background-color: light-dark(#f9f9f900, #001329);
@@ -69,9 +72,8 @@ nav {
 }
 li {
   border-color: light-dark(#001329, #f9f9f9);
-  margin-inline: 0.3rem !important;
 }
-.techLi {
+.techLi, .themeSwitcher {
   background-color: light-dark(#6b7280, rgb(15 118 110 / 0.3));
   color: light-dark(#f9f9f9, #5eead4);
 }

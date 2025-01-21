@@ -8,7 +8,7 @@ import { socialLinks } from "src/config";
 
 export default function SocialLinks() {
     return (
-        <div className="flex text-lg gap-5 float-right transition-opacity duration-300 hover:opacity-90">
+        <div className="flex text-lg gap-3 my-auto lg:gap-5 float-right transition-opacity duration-300 hover:opacity-90">
             <LinkWithIcon href={socialLinks.github.url} aria={socialLinks.github.lable}  icon={FaGithub} />
             <LinkWithIcon href={socialLinks.linkedin.url} aria={socialLinks.linkedin.lable} icon={FaLinkedinIn} />
             <LinkWithIcon href={socialLinks.email.url} aria={socialLinks.email.lable} icon={TfiEmail} />

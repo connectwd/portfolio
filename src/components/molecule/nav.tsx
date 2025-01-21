@@ -5,10 +5,11 @@ import Button from "../atoms/buttons/button";
 import { FiDownload } from "react-icons/fi";
 
 const navItems = {
-  "#about": { name: "About" },
+  "#about": { name: "Who am I?" },
   "#employment": { name: "Experience" },
   "#projects": { name: "Projects" },
   "#contact": { name: "Contact" },
+  "jake_owen_cv.pdf": { name: "CV" },
 };
 
 function debounce(func: Function, wait: number) {
@@ -33,7 +34,7 @@ export function Navbar() {
         if (element) {
           const rect = element.getBoundingClientRect();
           const isLastSection = index === sections.length - 1;
-          if (rect.top <= 500 && rect.bottom >= 0) {
+          if (rect.top <= 550 && rect.bottom >= 0) {
             currentSection = section;
           } else if (isLastSection && scrollPosition >= documentHeight - 150) {
             currentSection = section;
@@ -55,11 +56,11 @@ export function Navbar() {
 
   return (
     <nav className="lg:mb-16 mb-12 fixed top-0 lg:relative lg:py-5 navBackground justify-evenly flex lg:flex-col md:items-center lg:gap-6 h-14 lg:bg-transparent  lg:shadow-none sm:w-fill-available lg:w-auto" aria-label="Main Navigation">
-        <ul className="flex lg:flex-col gap-4 mx-2 md:mt-0 md:ml-auto">
+        <ul className="flex lg:flex-col md:mt-0 md:ml-auto lg:gap-4 w-fill-available">
           {Object.entries(navItems).map(([path, { name }]) => (
             <li
               key={path}
-              className={`flex items-center px-2 transition-all duration-200 ${
+              className={`flex text-sm lg:text-base lg:pl-3 items-center px-auto justify-center lg:justify-start transition-all duration-200 grow navItem ${
                 activeSection === path ? "lg:border-l-8 border-b-8 lg:border-b-0" : "border-gray-400 lg:border-l-4 border-b-4 lg:border-b-0"
               }`}
             >
