@@ -80,13 +80,14 @@ export const ThemeSwitch: React.FC = () => {
       id="theme-toggle"
       aria-label={`${currentTheme} mode`}
       onClick={toggleTheme}
-      className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90"
+      className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90 themeSwitcher rounded-full pr-2 mr-1"
     >
       <FaCircleHalfStroke
-        className={`h-[20px] w-[20px] ${
+        className={`h-[60%] w-[60%] ${
           currentTheme === "dark" ? "text-[#D4D4D4]" : "text-[#1c1c1c]"
         }`}
       />
+      <span className="text-xs">{currentTheme === "dark" ? "Light" : "Dark"} mode</span>
     </button>
   );
 };

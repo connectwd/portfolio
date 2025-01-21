@@ -31,5 +31,4 @@ Start the development server:
 ```
 pnpm dev
 ```
-The server will be running at [http://localhost:3000](http://localhost:3000).
 
