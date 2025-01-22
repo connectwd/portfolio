@@ -1,8 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Button from "../atoms/buttons/button";
-import { FiDownload } from "react-icons/fi";
 
 const navItems = {
   "#about": { name: "Who am I?" },
@@ -34,7 +32,7 @@ export function Navbar() {
         if (element) {
           const rect = element.getBoundingClientRect();
           const isLastSection = index === sections.length - 1;
-          if (rect.top <= 550 && rect.bottom >= 0) {
+          if (rect.top <= 600 && rect.bottom >= 0) {
             currentSection = section;
           } else if (isLastSection && scrollPosition >= documentHeight - 150) {
             currentSection = section;

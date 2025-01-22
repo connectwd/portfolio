@@ -59,7 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
-      <body className="flex flex-col items-center justify-center mx-auto overscroll-none dark:bg-[url('/photos/blob-dark.svg')] lg:flex lg:justify-between lg:gap-6">
+      <body className="flex flex-rowitems-center justify-center mx-auto my-0 overscroll-none dark:bg-[url('/photos/blob-dark.svg')]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -67,7 +67,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="lg:flex lg:justify-between lg:gap-6">
-            <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[50%] flex-col lg:justify-between py-5 pt-20 lg:pt-16 md:px-0 lg:px-5">
+            <header className="lg:sticky lg:top-0 lg:flex lg:h-svh lg:w-[50%] flex-col lg:justify-between py-5 pt-20 lg:pt-16 md:px-0 lg:px-5">
               <div className="flex flex-col items-start gap-5 max-w-full">
                 <Image className="bg-slate-100 rounded-full p-1 mx-auto lg:mx-0" src={logo} width={60} height={60} alt="logo" />
                 <h1 className="text-4xl font-bold mx-auto lg:mx-0 mt-4">{metaData.title}</h1>
