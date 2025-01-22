@@ -1,12 +1,19 @@
 {
     "globalDependencies": ["**/.env.*local"],
-    "extends": ["//"],
     "pipeline": {
       "build": {
         "env": [
             "BEARER_TOKEN",
             "MAKE_URL"
         ]
+      },
+      "test:watch": {
+        "cache": false,
+        "persistent": true
+      },
+      "coverage": { "cache": false },
+      "e2e": {
+        "cache": true
       }
     }
 }
