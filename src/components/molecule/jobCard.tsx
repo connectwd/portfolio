@@ -15,7 +15,7 @@ const JobCard = ({ job }) => {
   };
 
   return (
-    <div className="group-hover:!opacity-100 group-hover:/list:opacity-50 group-hover group transition motion-reduce:transition-none rounded-lg p-2 my-2">
+    <div id={``} className="group-hover:!opacity-100 group-hover:/list:opacity-50 group-hover group transition motion-reduce:transition-none rounded-lg p-2 my-2">
       <a
         href={links[0]?.url || "#employment"}
         target="_blank"

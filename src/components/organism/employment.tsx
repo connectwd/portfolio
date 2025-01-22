@@ -1,41 +1,17 @@
 import React from "react";
 import JobCard from "../molecule/jobCard";
+import { jobs } from "src/data/project-data";
 
 const WorkHistory = () => {
-  const jobs = [
-    {
-      title: "Full-Stack Software Developer",
-      company: "STEM Learning",
-      date: "APR 2024 — CURRENT",
-      description: "Developed an in-house user management application for over 20,000 users. Supported Agile development processes and ceremonies. Provided onboarding and support to new team members. Collaborated with UX/UI teams to ensure accessibility standards were met.",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "Auth0", "Jest", "SQL"],
-      links: [{ name: "STEM Learning", url: "https://www.stem.org.uk"}]
-    },
-    {
-      title: "Software Engineer",
-      company: "William Hill",
-      date: "AUG 2019 — APR 2024",
-      description: "Developed new functionality in line with end-user and architectural requirements. Created unit tests to maintain high developmental and technical standards. Participated in and supported Agile development processes. Investigated, researched, and implemented coding solutions. Integrated a new content management system (CMS) to make the application more dynamic.",
-      technologies: ["JavaScript", "React", "TypeScript", "Java", "Jest", "React Testing Library", "HTML", "CSS", "Sass", "SQL", "Serverless", "AWS Lambda", "AWS CloudFront", "Jira"],
-      links: [{ name: "William Hill", url: "https://www.williamhill.com/"}]
-    },
-    {
-      title: "Software Developer in Test",
-      company: "William Hill",
-      date: "JUN 2022 — NOV 2022",
-      description: "Developed automation tests to streamline feature deployments. Supported multi-environment release management and monitoring using CI/CD pipelines. Performed manual integration and regression testing of codebases.",
-      technologies: ["TestCafe", "TypeScript", "SuperTest", "GitLab", "Splunk"],
-      links: [{ name: "William Hill", url: "https://www.williamhill.com/"}]
-    }
-  ];
-
+  
   return (
     <section id="employment" className="pt-5 max-w-3xl mx-auto">
       <h2 className="text-3xl font-semibold text-left mb-2 px-5 pb-3">Experience</h2>
       <ul className="w-fullspace-y-6 space-x-1 px-2">
         {jobs.map((job, index) => (
           <li className="mx-1 my-3 group transition-all rounded-xl" key={index}>
-          <JobCard job={job} key={index+job.company} />
+            
+          <JobCard job={job}  />
           </li>
         ))}
       </ul>
