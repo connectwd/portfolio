@@ -1,0 +1,39 @@
+name: CI Pipeline
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    name: Build and Test
+    timeout-minutes: 30
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 8
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: 'Create root env file'
+        run: |
+          touch .env
+          echo "NEXT_PUBLIC_BEARER_TOKEN=weirdtoken" > .env
+
+      - name: 'Test: Unit'
+        run: pnpm turbo run test
