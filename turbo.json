@@ -7,6 +7,7 @@
             "MAKE_URL"
         ]
       },
+      "test": {},
       "test:watch": {
         "cache": false,
         "persistent": true
