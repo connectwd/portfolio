@@ -8,24 +8,29 @@ describe('Button component', () => {
     const { getByText } = render(<Button variant="primary-button" text="Primary Button" />);
     const buttonElement = getByText('Primary Button');
     expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).toMatchSnapshot();
   });
 
   test('renders secondary button correctly', () => {
     const { getByText } = render(<Button variant="secondary-button" text="Secondary Button" />);
     const buttonElement = getByText('Secondary Button');
     expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement).toMatchSnapshot();
   });
 
   test('renders primary link correctly', () => {
     const { getByText } = render(<Button variant="primary-link" text="Primary Link" />);
     const linkElement = getByText('Primary Link');
     expect(linkElement).toBeInTheDocument();
+    expect(linkElement).toMatchSnapshot();
   });
 
   test('renders secondary link correctly', () => {
     const { getByText } = render(<Button variant="secondary-link" text="Secondary Link" />);
     const linkElement = getByText('Secondary Link');
     expect(linkElement).toBeInTheDocument();
+    expect(linkElement).toMatchSnapshot();
+
   });
 
   test('calls onClick function when button is clicked', () => {
