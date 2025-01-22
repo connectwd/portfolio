@@ -6,7 +6,7 @@
     "build": "dotenv -e .env next build",
     "start": "dotenv -e .env next start",
     "test": "dotenv -e .env npm run test:run",
-    "coverage": "dotenv -e .env npm run test",
+    "coverage": "dotenv -e .env npm run test:coverage",
     "test:run": "jest --transformIgnorePatterns \"node_modules/(?!iconv-lite)/\" --runInBand",
     "test:coverage": "jest --coverage --transformIgnorePatterns \"node_modules/(?!iconv-lite)/\" --no-cache --runInBand",
     "test:run-watch": "jest --watch --transformIgnorePatterns \"node_modules/(?!iconv-lite)/\" --runInBand",
