@@ -16,15 +16,10 @@ module.exports = async () => ({
   setupFiles: ['<rootDir>/jest.setEnvVariables.js'],
 
   collectCoverageFrom: [
-    './app/api/**/*.{js,jsx,ts,tsx}',
-    './app/api/**/**/*.{js,jsx,ts,tsx}',
-    './components/**/*.{js,jsx,ts,tsx}',
-    './components/**/**/*.{js,jsx,ts,tsx}',
-    './helpers/**/*.{js,jsx,ts,tsx}',
-    './helpers/**/**/*.{js,jsx,ts,tsx}',
-    './helpers/**/**/**/*.{js,jsx,ts,tsx}',
-    'pages/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
+    './src/app/api/**/*.{js,jsx,ts,tsx}',
+    './src/app/helper/**/*.{js,jsx,ts,tsx}',
+    './src/components/**/*.{js,jsx,ts,tsx}',
+    './components/**/**/**/*.{js,jsx,ts,tsx}',
   ],
   coveragePathIgnorePatterns: [
     '/node_modules/',
