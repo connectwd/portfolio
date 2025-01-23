@@ -1,5 +1,5 @@
 import { projects } from "src/data/project-data";
-import TechBubble from "../atoms/techBubble";
+import TechBubble from "../atoms/bubbles/techBubble";
 import { ProjectCard } from "../molecule/projectCard";
 
 export default function Projects() {

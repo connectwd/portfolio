@@ -9,6 +9,7 @@ const TechBubble = ({ tech, index }: Props) => {
     return (
         <span
             id={`${tech}-${index}`}
+            data-testid={`${tech}-${index}`}
             className="techLi text-sm px-3 py-1 rounded-full"
         >
             {tech}
