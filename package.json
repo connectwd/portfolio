@@ -12,6 +12,8 @@
     "test:run-watch": "jest --watch --transformIgnorePatterns \"node_modules/(?!iconv-lite)/\" --runInBand",
     "test:watch": "dotenv -e ../../.env npm run test:run-watch"
   },
+  "packageManager": "pnpm@8.15.4",
+  "name": "portfolio",
   "dependencies": {
     "@makotot/ghostui": "^2.0.0",
     "@testing-library/jest-dom": "^6.6.3",
