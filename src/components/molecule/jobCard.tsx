@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import TechBubble from "../atoms/techBubble";
+import TechBubble from "../atoms/bubbles/techBubble";
 
 const JobCard = ({ job }) => {
   const { title, company, date, description, technologies, links } = job;

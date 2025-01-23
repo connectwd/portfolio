@@ -20,6 +20,7 @@ module.exports = async () => ({
     './src/app/helper/**/*.{js,jsx,ts,tsx}',
     './src/components/**/*.{js,jsx,ts,tsx}',
     './components/**/**/**/*.{js,jsx,ts,tsx}',
+    './components/**/**/*.{js,jsx,ts,tsx}',
   ],
   coveragePathIgnorePatterns: [
     '/node_modules/',

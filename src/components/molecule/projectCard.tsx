@@ -1,6 +1,6 @@
 import React from 'react'
 import { Project } from 'src/data/project-data'
-import TechBubble from '../atoms/techBubble'
+import TechBubble from '../atoms/bubbles/techBubble'
 
 type Props = {
     index: number,
