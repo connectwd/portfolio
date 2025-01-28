@@ -18,10 +18,7 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
-  color-scheme: light dark;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  color-scheme: light dark;}
 
 /* Dark theme colors */
 .dark {

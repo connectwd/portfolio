@@ -20,7 +20,7 @@ A fast and lightweight portfolio built with [Next.js](https://nextjs.org/), [Ver
 
 ## API's
 
-- '/api/sendEmail' : Interal endpoint the sends trigger to the Make.com pipeline. Body: ``` { name: "string, required", email: "sring, required", message: "string, optional" } ``` 
+- '/api/sendEmail' : Interal endpoint the sends trigger to the Make.com pipeline. Body: ``` { name: "string, required", email: "string, required", message: "string, optional" } ``` 
 Auth: Beaer token, stored in Vercel.
 
 ## Installation
