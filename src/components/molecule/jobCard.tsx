@@ -20,7 +20,7 @@ const JobCard = ({ job }) => {
         href={links[0]?.url || "#employment"}
         target="_blank"
         rel="noopener noreferrer"
-        className="peer cursor-progress"
+        className="peer"
       >
         <div className="flex justify-between items-start">
           <div>
