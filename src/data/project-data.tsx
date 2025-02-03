@@ -4,7 +4,7 @@ export interface Project {
   extraDescription?: string;
   technologies: string[] | [];
   image: string;
-  link: string;
+  link?: string;
 }
 
 export const projects: Project[] = [
@@ -14,7 +14,6 @@ export const projects: Project[] = [
     extraDescription: "This project was created to showcase my skills and experience as a software developer. It was built using Next.js and Vercel as speed to production was a key requirement.",
     technologies: ["Next.js", "Tailwind CSS", "Vercel", "AI Automation"],
     image: "/opengraph-image.png",
-    link: "https://jakedev.info",
   },
   {
     title: "GainzClub",
