@@ -49,9 +49,17 @@ export interface Jobs  {
 
 export const jobs: Jobs[] = [
   {
+    title: "Consultant Full-Stack Developer",
+    company: "Enablis Consulting",
+    date: "APR 2025 - OCT 2025",
+    description: "Supported both internal and client based projects while developing strengthened client relationships. Working adaptively to develop solutions using a range of tools and languages.",
+    technologies: ["React", "TypeScript", "GraphQL", "AWS Amplify V2", "Material UI", "Strapi"],
+    links: [{ name: "Enablis Consulting", url: "https://enablis.co/"}]
+  },
+  {
     title: "Full-Stack Software Developer",
     company: "STEM Learning",
-    date: "APR 2024 — CURRENT",
+    date: "APR 2024 — APR 2025",
     description: "Developed an in-house user management application for over 20,000 users. Supported Agile development processes and ceremonies. Provided onboarding and support to new team members. Collaborated with UX/UI teams to ensure accessibility standards were met.",
     technologies: ["Next.js", "TypeScript", "Tailwind", "Auth0", "Jest", "SQL"],
     links: [{ name: "STEM Learning", url: "https://www.stem.org.uk"}]
