@@ -6,9 +6,10 @@ import { fetchBearerToken } from "src/app/helpers/api/fetchBearerToken";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: "",
+    realName: "",
     email: "",
     message: "",
+    name: undefined
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,6 +22,10 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (formData.name != undefined) {
+      console.log("its a bot")
+      return;
+    }
     const token = await fetchBearerToken();
     const response = await fetch('/api/sendEmail', {
       method: 'POST',
@@ -34,10 +39,11 @@ export default function ContactForm() {
       // Handle successful response
       console.log('Email sent successfully:', response);
       setFormData({
-        name: '',
+        realName: '',
         email: '',
         message: '',
-      });
+        name: undefined
+      })
     } else {
       // Handle error response
       console.error('Failed to send email');
@@ -54,7 +60,7 @@ export default function ContactForm() {
           </label>
           <input
             type="text"
-            name="name"
+            name="realName"
             id="contact-name"
             placeholder="Name"
             value={formData.name}
@@ -93,6 +99,9 @@ export default function ContactForm() {
             text="Send Message"
             styles="w-full shadow-inner-glow justify-center"
           />
+          {/* Honey Pot Field */}
+          <label className="ohnohoney" htmlFor="name"></label>
+          <input className="ohnohoney" onChange={handleChange} autoComplete="off" type="text" id="name" name="name" placeholder="Your name here" />
         </form>
       </div>
     </section>
