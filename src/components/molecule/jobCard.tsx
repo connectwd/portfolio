@@ -2,7 +2,7 @@
 import React from "react";
 import TechBubble from "../atoms/techBubble";
 
-const JobCard = ({ job }) => {
+const JobCard = (job) => {
   const { title, company, date, description, technologies, links } = job;
 
   const isValidUrl = (url) => {
@@ -38,7 +38,7 @@ const JobCard = ({ job }) => {
         <p className="mt-4">{description}</p>
         <div className="flex flex-wrap gap-2 mt-4">
           {technologies.map((tech, index) => (
-            <TechBubble tech={tech} index={index} />
+            <TechBubble tech={tech} index={index} key={tech}/>
           ))}
         </div>
       </a>

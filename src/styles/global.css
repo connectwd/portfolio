@@ -18,7 +18,8 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
-  color-scheme: light dark;}
+  color-scheme: light dark;
+}
 
 /* Dark theme colors */
 .dark {
@@ -52,28 +53,41 @@ section {
 }
 
 /* theme switchs */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: light-dark(#001329, #f9f9f9);
 }
+
 body {
   background-color: light-dark(#f9f9f9, #001329);
   z-index: 0;
 }
+
 nav {
   z-index: 1000;
   width: 100%;
 }
+
 .navBackground {
   background-color: light-dark(#f9f9f9, #001329);
   box-shadow: light-dark(#f9f9f9, #001329) 0px 10px 12px 0px;
 }
+
 li {
   border-color: light-dark(#001329, #f9f9f9);
 }
-.techLi, .themeSwitcher {
+
+.techLi,
+.themeSwitcher {
   background-color: light-dark(#6b7280, rgb(15 118 110 / 0.3));
   color: light-dark(#f9f9f9, #5eead4);
 }
+
 .group:hover {
   background-color: light-dark(rgba(65, 75, 89, 0.1), rgba(51, 65, 85, 0.5));
 }
@@ -108,7 +122,7 @@ li {
   content: "#";
 }
 
-.prose *:hover > .anchor {
+.prose *:hover>.anchor {
   @apply visible;
 }
 
@@ -147,7 +161,7 @@ h6 {
   @apply font-medium;
 }
 
-.prose > :first-child {
+.prose> :first-child {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
@@ -158,8 +172,10 @@ pre::-webkit-scrollbar {
 }
 
 pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Remove Safari input shadow on mobile */
@@ -182,10 +198,20 @@ table {
   white-space: nowrap;
 }
 
-.prose .callout > p {
+.prose .callout>p {
   margin: 0 !important;
 }
 
 .title {
   text-wrap: balance;
+}
+
+.ohnohoney {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
 }

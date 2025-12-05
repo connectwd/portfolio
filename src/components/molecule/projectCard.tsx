@@ -3,14 +3,12 @@ import { Project } from 'src/data/project-data'
 import TechBubble from '../atoms/techBubble'
 
 type Props = {
-    index: number,
     project: Project,
 }
 
-export const ProjectCard = ({ index, project }: Props) => {
+export const ProjectCard = ({ project }: Props) => {
     return (
         <div
-            key={index}
             className="rounded-lg overflow-hidden bg-slate-600/10 transition-all motion-reduce:transition-none duration-300 relative group"
         >
             {project.image && (
@@ -27,8 +25,8 @@ export const ProjectCard = ({ index, project }: Props) => {
                     {project.extraDescription}
                 </div>)}
                 <div className="text-sm text-gray-500 flex flex-wrap gap-2 py-1">
-                    {project.technologies.map((tech, i) => (
-                        <TechBubble index={i} tech={tech} />
+                    {project.technologies.map((tech: string, i) => (
+                        <TechBubble index={i} tech={tech} key={tech} />
                     ))}
                 </div>
                 {project.link && (
